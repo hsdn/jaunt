@@ -1,0 +1,15 @@
+{
+    "name": "jaunt",
+    "author": "",
+    "description": "Teleport Jaunt.",
+    "options": {
+        "niceName": "Jaunt",
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"
+    },
+    "supportUrl": "https://github.com/hsdn/jaunt/issues",
+    "servers": ["https://raw.githubusercontent.com/hsdn/jaunt/master/"],
+    "disableAutoUpdate": false,
+    "version": "6/9/2021"
+}
