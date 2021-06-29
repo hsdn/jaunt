@@ -288,8 +288,8 @@ module.exports = function ff(mod) {
 			}
 			_m.x = [loc, Date.now()];
 
-			mod.send("S_ABNORMALITY_BEGIN", 3, { "target": mod.game.me.gameId, "source": mod.game.me.gameId, "id": 2112, "duration": 0, "unk": 0, "stacks": 1, "unk2": 0, "unk3": 0 });
-			mod.send("S_ABNORMALITY_BEGIN", 3, { "target": mod.game.me.gameId, "source": mod.game.me.gameId, "id": 2060, "duration": 0, "unk": 0, "stacks": 1, "unk2": 0, "unk3": 0 });
+			mod.send("S_ABNORMALITY_BEGIN", mod.majorPatchVersion >= 107 ? 5 : 4, { "target": mod.game.me.gameId, "source": mod.game.me.gameId, "id": 2112, "duration": 0, "unk": 0, "stacks": 1, "unk2": 0, "unk3": 0 });
+			mod.send("S_ABNORMALITY_BEGIN", mod.majorPatchVersion >= 107 ? 5 : 4, { "target": mod.game.me.gameId, "source": mod.game.me.gameId, "id": 2060, "duration": 0, "unk": 0, "stacks": 1, "unk2": 0, "unk3": 0 });
 			setTimeout(() => {
 				mod.send("S_ABNORMALITY_END", 1, { "target": mod.game.me.gameId, "id": 2112 });
 				mod.send("S_ABNORMALITY_END", 1, { "target": mod.game.me.gameId, "id": 2060 });
