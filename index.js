@@ -242,7 +242,7 @@ module.exports = function ff(mod) {
 
 			if (_m.m) {
 				for (const i of _m.b) {
-					if ((_m.d = Math.floor(((i.loc.x - loc.x) ** 2 + (i.loc.y - loc.y) ** 2) ** 0.5 / 25)) < mod.settings.range) {
+					if (i.loc && (_m.d = Math.floor(((i.loc.x - loc.x) ** 2 + (i.loc.y - loc.y) ** 2) ** 0.5 / 25)) < mod.settings.range) {
 						_m.x = _m.x.length ? _m.x[0] < _m.d ? _m.x : [_m.d, i.loc, i.w] : [_m.d, i.loc, i.w];
 					}
 				}
