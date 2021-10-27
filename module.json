@@ -1,7 +1,7 @@
 {
     "name": "jaunt",
     "author": "",
-    "description": "Teleport Jaunt.",
+    "description": "Teleport jaunt like Mystic/Sorcerer teleport.",
     "options": {
         "niceName": "Jaunt",
         "settingsVersion": 1,
@@ -10,6 +10,6 @@
     },
     "supportUrl": "https://github.com/hsdn/jaunt/issues",
     "servers": ["https://raw.githubusercontent.com/hsdn/jaunt/master/"],
-    "disableAutoUpdate": false,
-    "version": "9/26/2021"
+    "version": "110.02",
+    "disableAutoUpdate": false
 }
