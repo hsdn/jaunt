@@ -13,7 +13,7 @@ module.exports = function ff(mod) {
 		"u2": 899999999
 	};
 
-	mod.hook("S_LOGIN", 14, ({ templateId }) => {
+	mod.hook("S_LOGIN", mod.majorPatchVersion >= 114 ? 15 : 14, ({ templateId }) => {
 		_m.m = [1, 10].includes(_m.i = (templateId - 10101) % 100) ? 1 : [6, 7].includes(_m.i) ? 0 : -1;
 		_m.g = [{ "gameId": mod.game.me.gameId }];
 
