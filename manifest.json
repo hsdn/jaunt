@@ -1,13 +1,13 @@
 {
     "files": {
         "README.md": "a513cc33e721b9a110df6b18eb39c083512f92b3ae3c69cfb585a433653668fd",
-        "index.js": "8adc498b2e498c3a6c11f28ca9f76f8f19c464bd03dc149d39804409debbf93c",
+        "index.js": "e8ff11381eeb04db0b053d04e902df819d42b603c0c3ca53c1f64aacd7c550bb",
         "module.json": "d648f03773c62c23c72544e9a08f26ebbee2e055ac2b77d03a3f6d86ed404600",
         "settings_migrator.js": "78e64c20fc6e8c12d5d0ba2e177d7fb9b12b4cc0291c97dffa1e0ce0ab60fb6f"
     },
     "defs": {
         "C_PLAYER_LOCATION": 5,
-        "C_START_INSTANCE_SKILL": 7,
+        "C_START_INSTANCE_SKILL": [7,8],
         "S_ABNORMALITY_BEGIN": 4,
         "S_ABNORMALITY_END": 1,
         "S_ACTION_END": 5,
