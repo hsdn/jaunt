@@ -162,7 +162,7 @@ module.exports = function ff(mod) {
 				if (mod.settings.debug) {
 					if ((_m.a1 = _m.a1 || dest) !== dest && (_m.d = Math.floor(((dest.x - _m.p.loc.x) ** 2 + (dest.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": _m.u2 });
-						mod.send("S_SPAWN_DROPITEM", 6, { "gameId": --_m.u2, "loc": { ...dest, "z": dest.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
+						mod.send("S_SPAWN_DROPITEM", 9, { "gameId": --_m.u2, "loc": { ...dest, "z": dest.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
 					}
 				}
 			}
@@ -175,7 +175,7 @@ module.exports = function ff(mod) {
 				if (mod.settings.debug) {
 					if ((_m.a2 = _m.a2 || loc) !== loc && (_m.d = Math.floor(((loc.x - _m.p.loc.x) ** 2 + (loc.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": _m.u2 });
-						mod.send("S_SPAWN_DROPITEM", 6, { "gameId": --_m.u2, "loc": { ...loc, "z": loc.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
+						mod.send("S_SPAWN_DROPITEM", 9, { "gameId": --_m.u2, "loc": { ...loc, "z": loc.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
 					}
 				}
 			}
@@ -188,7 +188,7 @@ module.exports = function ff(mod) {
 				if (mod.settings.debug) {
 					if ((_m.a3 = _m.a3 || loc) !== loc && (_m.d = Math.floor(((loc.x - _m.p.loc.x) ** 2 + (loc.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": _m.u2 });
-						mod.send("S_SPAWN_DROPITEM", 6, { "gameId": --_m.u2, "loc": { ...loc, "z": loc.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
+						mod.send("S_SPAWN_DROPITEM", 9, { "gameId": --_m.u2, "loc": { ...loc, "z": loc.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
 					}
 				}
 			}
@@ -202,7 +202,7 @@ module.exports = function ff(mod) {
 			}
 		});
 
-		hook("C_START_INSTANCE_SKILL", 8, { "order": -100 }, ({ skill, loc, w, targets }) => {
+		hook("C_START_INSTANCE_SKILL", mod.majorPatchVersion >= 106 ? 9 : 8, { "order": -100 }, ({ skill, loc, w, targets }) => {
 			if (skill.id !== mod.settings.skill || (!mod.game.me.inOpenWorld && !mod.game.me.inCombat && targets[0])) return;
 
 			Object.assign(skill, { "type": 0, "npc": false, "huntingZoneId": 0, "reserved": 0 });
@@ -216,7 +216,7 @@ module.exports = function ff(mod) {
 						return () => {
 							if (mod.settings.debug) {
 								mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": _m.u1 });
-								mod.send("S_SPAWN_DROPITEM", 6, { "gameId": --_m.u1, "loc": Object.assign(p1[0], { "z": p1[0].z - 500 }), "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
+								mod.send("S_SPAWN_DROPITEM", 9, { "gameId": --_m.u1, "loc": Object.assign(p1[0], { "z": p1[0].z - 500 }), "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
 								setTimeout(
 									(function(p11) {
 										return () => mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": p11 });
@@ -269,7 +269,7 @@ module.exports = function ff(mod) {
 					mod.command.message(`\n\t${ f1(v1).clr(_m.w === w ? "FF1493" : "FFD700") }\n\t${ f1(v3).clr(_m.w === w ? "FF1493" : "FFD700") }${v2 >= 3.14159 ? `${" (" + "360° - "}${ f1(v2) })` : "" }\n\t${ `${_m.x[0]}m`.clr(_m.w === w ? "FF1493" : "FFD700")}`);
 				}
 
-				mod.send("S_SPAWN_DROPITEM", 6, { "gameId": --_m.u1, "loc": { "x": _m.z.x, "y": _m.z.y, "z": _m.z.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
+				mod.send("S_SPAWN_DROPITEM", 9, { "gameId": --_m.u1, "loc": { "x": _m.z.x, "y": _m.z.y, "z": _m.z.z - 500 }, "item": 98260, "amount": 1, "expiry": 0, "explode": false, "masterwork": false, "enchant": 0, "source": 0, "debug": false, "owners": [{ "id": 0 }] });
 				setTimeout(
 					(function(p1) {
 						return () => mod.send("S_DESPAWN_DROPITEM", 4, { "gameId": p1 });
@@ -310,7 +310,7 @@ module.exports = function ff(mod) {
 		_m.s = loc;
 	});
 
-	mod.hook("S_PARTY_MEMBER_LIST", 9, ({ members }) => {
+	mod.hook("S_PARTY_MEMBER_LIST", mod.majorPatchVersion >= 106 ? 9 : 8, ({ members }) => {
 		_m.g = members;
 
 		if (_m.i === 0 && !_m.g.some(e => [1, 10].includes((e.class - 10101) % 100))) {
