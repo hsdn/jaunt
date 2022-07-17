@@ -202,7 +202,7 @@ module.exports = function ff(mod) {
 			}
 		});
 
-		hook("C_START_INSTANCE_SKILL", mod.majorPatchVersion >= 106 ? 9 : 8, { "order": -100 }, ({ skill, loc, w, targets }) => {
+		hook("C_START_INSTANCE_SKILL", mod.majorPatchVersion >= 114 ? 8 : 7, { "order": -100 }, ({ skill, loc, w, targets }) => {
 			if (skill.id !== mod.settings.skill || (!mod.game.me.inOpenWorld && !mod.game.me.inCombat && targets[0])) return;
 
 			Object.assign(skill, { "type": 0, "npc": false, "huntingZoneId": 0, "reserved": 0 });
