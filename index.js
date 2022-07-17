@@ -137,7 +137,7 @@ module.exports = function ff(mod) {
 			}
 		}
 
-		hook("S_SPAWN_NPC", 12, { "order": 300, "filter": { "fake": null } }, ({ gameId, loc, w, templateId, visible, villager, bySpawnEvent, bgTeam }) => {
+		hook("S_SPAWN_NPC", 11, { "order": 300, "filter": { "fake": null } }, ({ gameId, loc, w, templateId, visible, villager, bySpawnEvent, bgTeam }) => {
 			if (!visible || villager || bySpawnEvent || bgTeam || [1044, 1045, 1151, 1270, 1709, 1710, 1711, 1712, 5003, 5004, 9996, 9997, 9998, 2041, 2042, 2043, 2100, 4101].includes(templateId)) return;
 
 			_m.b.push({ gameId, loc, w });

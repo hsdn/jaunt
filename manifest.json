@@ -1,7 +1,7 @@
 {
     "files": {
         "README.md": "a513cc33e721b9a110df6b18eb39c083512f92b3ae3c69cfb585a433653668fd",
-        "index.js": "7372fffa66a40567f74e5011ba62fa80ae1138bca6ef3ed1a8c72db1f8f9a294",
+        "index.js": "0ec8a207db3fe0cdcbf7fa02f9d2ccd382d7c5dea3bb75cdb9dddd6304adeb65",
         "module.json": "d648f03773c62c23c72544e9a08f26ebbee2e055ac2b77d03a3f6d86ed404600",
         "settings_migrator.js": "78e64c20fc6e8c12d5d0ba2e177d7fb9b12b4cc0291c97dffa1e0ce0ab60fb6f"
     },
@@ -22,7 +22,7 @@
         "S_NPC_LOCATION": 3,
         "S_PARTY_MEMBER_LIST": [8,9],
         "S_SPAWN_DROPITEM": [6,9],
-        "S_SPAWN_NPC": 12,
+        "S_SPAWN_NPC": [11,12],
         "S_USER_EFFECT": 1
     }
 }
